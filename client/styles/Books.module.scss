@@ -4,13 +4,24 @@
 }
 
 .books {
-  display: flex;
   justify-content: space-evenly;
-  padding-bottom: 50px;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+
+  .book {
+    .cover {
+      object-fit: cover;
+    }
+  }
 }
 
 .info {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 
   .desc {
     overflow: hidden;
@@ -25,11 +36,21 @@
 
 .button_add {
   position: absolute;
-  top: 75px;
-  right: 7.5%;
+  top: 70px;
+  right: 118px;
   border: 1px solid #ccc;
   padding: 10px 15px;
   border-radius: 10px;
   background-color: rgb(57, 170, 106);
   cursor: pointer;
+}
+
+.button_update {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgb(57, 104, 170);
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
 }
