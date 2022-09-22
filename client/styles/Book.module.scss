@@ -1,0 +1,23 @@
+.book {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_back_home {
+  position: absolute;
+  top: 70px;
+  left: 118px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgb(57, 89, 170);
+  cursor: pointer;
+}

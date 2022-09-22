@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import styles from "../styles/Update.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-export interface IUpdateProps {}
+import { IUpdateProps } from "../types/types";
 
 export default function Update(props: IUpdateProps) {
   const [book, setBook] = useState({
@@ -83,7 +82,7 @@ export default function Update(props: IUpdateProps) {
           className={styles.button_add}
           type="submit"
         >
-          Add New Book
+          Update Book
         </button>
 
         <Link href="/">

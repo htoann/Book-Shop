@@ -3,8 +3,7 @@ import axios from "axios";
 import styles from "../styles/Add.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-export interface IAddProps {}
+import { IAddProps } from "../types/types";
 
 export default function Add(props: IAddProps) {
   const [book, setBook] = useState({
@@ -75,6 +74,7 @@ export default function Add(props: IAddProps) {
             onChange={handleChange}
             type="number"
             name="price"
+            placeholder="VND"
           />
         </div>
 
