@@ -9,6 +9,10 @@
 .info {
   display: flex;
   flex-direction: column;
+
+  .desc {
+    padding: 0 20%;
+  }
 }
 
 .button_back_home {

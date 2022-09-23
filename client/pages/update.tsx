@@ -79,7 +79,7 @@ export default function Update(props: IUpdateProps) {
 
         <button
           onClick={handleSubmit}
-          className={styles.button_add}
+          className={styles.button_update}
           type="submit"
         >
           Update Book

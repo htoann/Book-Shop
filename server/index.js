@@ -50,6 +50,24 @@ app.post("/", (req, res) => {
   });
 });
 
+app.put("/update/:id", (req, res) => {
+  const q =
+    "UPDATE books SET (`title`, `desc`, `cover`, `price`) = VALUES (?) WHERE id = " +
+    req.params.id;
+
+  const values = [
+    req.body.title,
+    req.body.desc,
+    req.body.cover,
+    req.body.price,
+  ];
+
+  db.query(q, [values], (err, data) => {
+    if (err) return res.json(err);
+    return res.json("The book has been created successfully.");
+  });
+});
+
 app.listen(8800, () => {
   console.log("Connected to backend.");
 });
