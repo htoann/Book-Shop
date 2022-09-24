@@ -5,7 +5,6 @@
 
 .books {
   justify-content: space-evenly;
-
   display: grid;
   gap: 20px;
   grid-template-columns: auto auto auto auto;
@@ -22,6 +21,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 
   .title {
     cursor: pointer;
@@ -51,14 +51,5 @@
   border-radius: 10px;
   background-color: rgb(57, 170, 106);
   cursor: pointer;
-}
-
-.button_update {
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 10px;
-  background-color: rgb(57, 104, 170);
-  cursor: pointer;
-  margin-top: 20px;
-  text-align: center;
+  font-weight: bold;
 }

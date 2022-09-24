@@ -32,44 +32,33 @@ export default function Books(props: IBooksProps) {
       <h1 className={styles.header}>Toan&apos;s Book Shop</h1>
       <div className={styles.books}>
         {books.map((book: IBookProps) => (
-          <Link
-            key={book.id}
-            href={{
-              pathname: "/book/[id]",
-              query: {
-                id: book.id,
-              },
-            }}
-          >
-            <div className={styles.book} key={book.id}>
-              {book.cover && (
-                <Image
-                  className={styles.cover}
-                  loader={coverLoader}
-                  src={book.cover}
-                  alt="Picture of the book"
-                  width={300}
-                  height={500}
-                />
-              )}
-              <div className={styles.info}>
+          <div className={styles.book} key={book.id}>
+            {book.cover && (
+              <Image
+                className={styles.cover}
+                loader={coverLoader}
+                src={book.cover}
+                alt="Picture of the book"
+                width={300}
+                height={500}
+              />
+            )}
+            <div className={styles.info}>
+              <Link
+                key={book.id}
+                href={{
+                  pathname: "/book/[id]",
+                  query: {
+                    id: book.id,
+                  },
+                }}
+              >
                 <h2 className={styles.title}>{book.title}</h2>
-                <p className={styles.desc}>{book.desc}</p>
-                <span className={styles.price}>{book.price}$</span>
-
-                <Link
-                  href={{
-                    pathname: "/update/[id]",
-                    query: {
-                      id: book.id,
-                    },
-                  }}
-                >
-                  <a className={styles.button_update}>Update Book</a>
-                </Link>
-              </div>
+              </Link>
+              <p className={styles.desc}>{book.desc}</p>
+              <span className={styles.price}>{book.price}$</span>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 

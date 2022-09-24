@@ -3,16 +3,31 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  padding-top: 5%;
+  padding-top: 60px;
+
+  position: relative;
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 
   .desc {
     padding: 0 20%;
   }
+}
+
+.button_action {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .button_back_home {
@@ -24,4 +39,28 @@
   border-radius: 10px;
   background-color: rgb(57, 89, 170);
   cursor: pointer;
+  font-weight: bold;
+}
+
+.button_delete {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgb(170, 57, 57);
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button_update {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgb(57, 170, 106);
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
